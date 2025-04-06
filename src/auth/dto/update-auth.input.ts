@@ -1,4 +1,4 @@
-import { CreateAuthInput } from './create-auth.input';
+import { CreateAuthInput } from './signup-input';
 import { InputType, Field, Int, PartialType } from '@nestjs/graphql';
 
 @InputType()
