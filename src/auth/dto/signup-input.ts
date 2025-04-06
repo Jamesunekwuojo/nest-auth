@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 import { InputType, Field } from '@nestjs/graphql';
 
-import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
+import {IsNotEmpty, IsString } from 'class-validator';
 
+@InputType()
 export class SignUpInput {
   @IsNotEmpty()
   @IsString()
