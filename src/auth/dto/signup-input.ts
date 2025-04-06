@@ -1,8 +1,8 @@
-import { InputType, Int, Field, InputType } from '@nestjs/graphql';
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+import { InputType, Field } from '@nestjs/graphql';
 
-import { IsString, IsNotEmpty, IsEmail, Length } from 'class-validator';
+import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
 
-@InputType()
 export class SignUpInput {
   @IsNotEmpty()
   @IsString()
@@ -10,18 +10,12 @@ export class SignUpInput {
   username: string;
 
   @IsNotEmpty()
-  IsString()
+  @IsString()
   @Field()
   email: string;
 
   @IsNotEmpty()
-  IsString()
-  @Field()
-  pass: string;
-
-  @IsNotEmpty()
-  IsString()
+  @IsString()
   @Field()
   password: string;
 }
-
